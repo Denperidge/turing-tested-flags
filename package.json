@@ -1,0 +1,19 @@
+{
+
+  "name": "turing-tested-flags",
+  "description": "",
+
+  "version": "1.0.0",
+
+  "scripts": {
+    "start": "npx parcel serve src/index.pug"
+  },
+
+  "author": "Denperidge",
+  "license": "SEE LICENSE IN LICENSE",
+
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "@parcel/transformer-pug": "^2.8.3"
+  }
+}
