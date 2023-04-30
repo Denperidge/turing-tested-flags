@@ -1,8 +1,16 @@
 body {
-    background-image: linear-gradient(#e66465, #9198e5);
+    background-image: linear-gradient(#ffffff, #ebebeb);
+    min-height: 100vh;
 }
 
 main {
+    margin: auto;
+    width: 80vw;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    * {
+        margin: 20px 0;
+    }
 }

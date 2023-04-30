@@ -32,3 +32,4 @@ function generateflag(e) {
 }
 
 $("#input").change(generateflag).keyup(generateflag)
+generateflag({target: document.getElementById("input")});
