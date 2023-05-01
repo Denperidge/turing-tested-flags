@@ -1,14 +1,31 @@
 let params = new URLSearchParams(window.location.search);
 
-const flag = "lesbian";
+let selectedFlags = new Set();
 const rectHeight = 24;
 
 const svg = document.getElementById("output");
 const inp = $("#input");
+const flagSelectors = $(".flag-selector");
 
 function updateParams(key, value) {
     params.set(key, value);
     history.pushState(null, "", window.location.pathname + "?" + params.toString());
+}
+
+function onFlagSelect(element=null) {
+    if (!element) element = $(this);
+
+    if (element.is(":checked")) selectedFlags.add(element.val());
+    else selectedFlags.delete(element.val());
+
+    
+    updateParams("flags", Array.from(selectedFlags));
+}
+
+flagSelectors.change(onFlagSelect);
+if ($(".flag-selector:checked").length < 1) {
+    flagSelectors[0].checked = true;
+    onFlagSelect($(flagSelectors[0]));
 }
 
 /**
@@ -55,7 +72,7 @@ function generateflag() {
     svg.setAttribute("height", svg.childElementCount * rectHeight);
 }
 
-function onInput(e) {
+function onTypers(e) {
     // Get letter by letter
     let input = e.target.value;
     updateParams("typers", input);
@@ -63,7 +80,8 @@ function onInput(e) {
     generateflag();
 }
 
-inp.change(onInput).keyup(onInput);
+
+inp.change(onTypers).keyup(onTypers);
 // If on load no typers, set default to currently selected flag
 if (inp.val() == "") {
     updateParams("typers", flag);
