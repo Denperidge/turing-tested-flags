@@ -1,8 +1,15 @@
+let params = new URLSearchParams(window.location.search);
+
 const flag = "lesbian";
 const rectHeight = 24;
 
 const svg = document.getElementById("output");
+const inp = $("#input");
 
+function updateParams(key, value) {
+    params.set(key, value);
+    history.pushState(null, "", window.location.pathname + "?" + params.toString());
+}
 
 /**
  * 
@@ -31,21 +38,34 @@ function rectangle(colour, y) {
     return rect;
 }
 
-function generateflag(e) {
+function generateflag() {
     // Clear any existing flag
     svg.innerHTML = "";
+    
+    let letters = params.get("typers");
+    inp.val(letters);
 
-    // Get letter by letter
-    let input = e.target.value.split("");
 
-    for (let i = 0; i < input.length; i++) {
+    for (let i = 0; i < letters.length; i++) {
         // Convert to lowercase, add colour based on letter
-        let letter = input[i].toLowerCase();
+        let letter = letters[i].toLowerCase();
         svg.appendChild(rectangle(letterToColour(letter), svg.childElementCount * rectHeight));
     }
     // Expand svg height to allow for all rect elements
     svg.setAttribute("height", svg.childElementCount * rectHeight);
 }
 
-$("#input").change(generateflag).keyup(generateflag)
-generateflag({target: document.getElementById("input")});
+function onInput(e) {
+    // Get letter by letter
+    let input = e.target.value;
+    updateParams("typers", input);
+
+    generateflag();
+}
+
+inp.change(onInput).keyup(onInput);
+// If on load no typers, set default to currently selected flag
+if (inp.val() == "") {
+    updateParams("typers", flag);
+}
+generateflag();
