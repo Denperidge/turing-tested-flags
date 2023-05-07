@@ -1,0 +1,102 @@
+body {
+    background-image: url("gifs/vert.gif");
+}
+
+.textstyle {
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+h1 {
+    color: blanchedalmond;
+    padding: 5px;
+}
+
+a:link {
+    color:violet
+  }
+  
+a:visited {
+    color:mediumpurple
+  }
+  
+a:hover {
+    color:aqua
+  }
+  
+p.bar {
+    text-align: right;
+    font-size: large;
+    color: blanchedalmond;
+    margin: 0 5px 0 5px;
+}
+
+#wrap {
+    width: 65%;
+}
+
+#dark {
+    background-color: rgba(25, 25, 112, 0.8);
+    padding: 5px;
+    margin-top: 50px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+#bar {
+    background-color:mediumvioletred;
+    
+    margin-top: 20px;
+
+    border-radius: 5px 5px 0 0;
+    border-style: solid;
+    border-width: medium;
+    border-color: mediumvioletred;
+}
+
+#main {
+    background-color:rgba(22, 22, 43, 0.9);
+    Padding: 50px 50px 50px 50px;
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: medium;
+    border-color: mediumvioletred;
+}
+
+#pink {
+    background-color: rgba(25, 25, 112, 0.8);
+    padding: 5px;
+    margin-top: 20px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.margin {
+    margin-bottom: 50px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inline {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+ul {
+    list-style-image: url("gifs/tinysparklestar.gif");
+}
+
+.opacity {
+    opacity: 0.8;
+}
