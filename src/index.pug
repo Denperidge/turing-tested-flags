@@ -7,20 +7,33 @@ html(lang="en")
         title Pride Flag Typers
         link(rel="stylesheet", href="index.scss")
     body
-        main 
+        header.align
+            img(src="gifs/sparkle.gif")
             h1 Pride Flag Typers
-            p.
-                (See the original post 
-                #[a(href="https://www.tumblr.com/calierthewolf/715868902662569984/if-a-terf-even-looks-at-this-they-will-die-in") here])
-
-            input#input(type=text placeholder="Insert letters")
-            br
-            svg#output
+            img(src="gifs/sparkle.gif")
         
+        div
+            #bar
+                p - □ x
+            main
+                include sparkle
+                p.
+                    (See the original post 
+                    #[a(href="https://www.tumblr.com/calierthewolf/715868902662569984/if-a-terf-even-looks-at-this-they-will-die-in") here])
+
+                input#input(type=text placeholder="Insert letters")
+                br
+                svg#output
+
+                include sparkle
+
 
         footer
             p Source code available at 
                 a(href="https://github.com/Denperidge/pride-flag-typers") github.com/Denperidge/pride-flag-typers
+
+            p Web design by: #[a(href="https://github.com/SodaSkunk" target="_blank") SodaSkunk] 
+            p Inspiration taken from: #[a(href="https://plasticdino.neocities.org/" target="_blank") plasticdino]
             include:markdown-it:get-thanks-to ../README.md
 
         
