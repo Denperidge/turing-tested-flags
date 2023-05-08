@@ -2,7 +2,7 @@
 
 A project based on a [sadly now unavailable tweet](https://web.archive.org/web/20200712210219/https://twitter.com/linodykes/status/1282400104356417537) but archived & expanded upon in a [delightful Tumblr post](https://www.tumblr.com/calierthewolf/715868902662569984/if-a-terf-even-looks-at-this-they-will-die-in). Create the most beautiful or horrid pride flags you can imagine, the world is your oyster!
 
-If you want to test out the project, it's hosted online on [flags.denperidge.com](https://flags.denperidge.com)! If you want to run it locally or contribute, feel free to read further.
+If you want to test out the project, it's hosted online on [flags.neonpastel.net](https://flags.neonpastel.net)! If you want to run it locally or contribute, feel free to read further.
 
 ## How-To
 ### Run locally
